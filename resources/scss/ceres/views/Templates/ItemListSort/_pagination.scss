@@ -1,0 +1,13 @@
+.list-controls .list-controls-inner {
+	background: $cfourSecondaryColor;
+}
+.cmp-paginator{
+	.page-item {
+		&.active {
+			.page-link {
+				background-color: $cfourSecondaryColor;
+				border-color: $cfourSecondaryColor;
+			}
+		}
+	}
+}

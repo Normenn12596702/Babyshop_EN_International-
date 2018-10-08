@@ -1,0 +1,51 @@
+.cmp-country-settings {
+    left: 0;
+    right: 0;
+    transform: unset;
+    background-color: $cfourSecondaryColor;
+    border-top: 1px solid $cfourWhite;
+    overflow: hidden;
+    .list-title {
+        color: $cfourWhite;
+        hr {
+            border-color: $cfourWhite;
+        }
+    }
+    ul{
+        li.active {
+            a {
+                background-color:$cfourWhite;
+                color: $cfourPrimaryColor;
+                &:hover {
+                    background-color:$cfourWhite;
+                    color: $cfourPrimaryColor;
+                }
+            }
+        }
+        li {
+            a {
+                &:hover {
+                    background-color:$cfourWhite;
+                    color: $cfourPrimaryColor;
+                }
+            }
+        }
+    }
+}
+.cmp-currency-select {
+    background-color: $cfourSecondaryColor;
+    border-top: 1px solid $cfourWhite;
+    overflow: hidden;
+    hr {
+        border-color: $cfourWhite;
+    }
+    ul li a:hover, ul li.active a {
+        color: $cfourPrimaryColor;
+        background-color: $cfourWhite;
+    }
+    @media (max-width: 767px) {
+        .currency-list ul>li {
+            width: 25%;
+        }
+    }
+}

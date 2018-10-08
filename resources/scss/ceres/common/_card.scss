@@ -1,0 +1,12 @@
+.card{
+	.item-edit{
+		.fa{
+		    color: $cfourSecondaryColor;
+			cursor: pointer;
+		    &:hover{
+				color: $cfourSecondaryColor;
+				border-color: $cfourSecondaryColor;
+	    	}
+    	}
+	}
+}

@@ -1,0 +1,20 @@
+<div class="c4brandsimages{% if config('CfourCeresFashion.homepage.grayscale_brands_active') == "true" %} c4grayscalebrands{% endif %}">
+    <div class="row">
+        {% for brand in brands %}
+            {% if config('CfourCeresFashion.homepage.brands_count') > i or config('CfourCeresFashion.homepage.brands_count') == 0 %}
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="c4brandlogo">
+                        {% if brand.url %}
+                            <a href="{{ brand.url }}" target="_blank">
+                                <img class="img-fluid" src="{{ brand.logo }}" alt="{{ brand.name }}" title="{{ brand.name }}"/>
+                            </a>
+                        {% else %}
+                            <img class="img-fluid" src="{{ brand.logo }}" alt="{{ brand.name }}" title="{{ brand.name }}"/>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            {% set i = i + 1 %}
+        {% endfor %}
+    </div>
+</div>

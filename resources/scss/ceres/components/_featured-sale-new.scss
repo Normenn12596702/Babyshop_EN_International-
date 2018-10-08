@@ -1,0 +1,16 @@
+.featured-sale-new{
+
+	.featured-category-inner{
+		background-color: rgba($cfourSecondaryColor, .9);
+	}
+
+	.featured-category-headline{
+
+	}
+
+	&:hover {
+		.featured-category-inner{
+		    background: rgba($cfourSecondaryColor, 1);
+		}
+	}
+}

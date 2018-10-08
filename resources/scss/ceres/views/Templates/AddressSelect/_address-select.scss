@@ -1,0 +1,29 @@
+.add-item {
+  .fa {
+    color: $cfourWhite;
+    border-color: $cfourWhite;
+    margin-left: 0;
+    margin-right: 6px;
+    &:hover {
+      color: $cfourWhite;
+      border-color: $cfourWhite;
+    }
+  }
+}
+
+.cmp-address-list {
+  .item-content {
+    color: #000;
+  }
+  .item-remove, .item-edit {
+    .btn {
+      padding: 5px;
+    }
+  }
+  .item input:checked {
+    &+ .item-inner {
+      background-color: $cfourWhite;
+      color: $cfourWhite;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{% import "Ceres::Widgets.Helper.TwigBuilder" as Twig %}
+
+{# Fetching infos #}
+{% set image1  = widget.settings.customImagePath1.mobile %}
+{% set image2  = widget.settings.customImagePath2.mobile %}
+{% set image3  = widget.settings.customImagePath3.mobile %}
+{% set image4  = widget.settings.customImagePath4.mobile %}
+{% set image5  = widget.settings.customImagePath5.mobile %}
+{% set link1 = widget.settings.linkImage1.mobile %}
+{% set link2 = widget.settings.linkImage2.mobile %}
+{% set link3 = widget.settings.linkImage3.mobile %}
+{% set link4 = widget.settings.linkImage4.mobile %}
+{% set link5 = widget.settings.linkImage5.mobile %}
+
+{# Creating Default Image #}
+{% if image1 | trim is empty %}
+    {% set image1  = "https://dummyimage.com/560x300/cccccc/777777" %}
+{% endif %}
+{% if image2 | trim is empty %}
+    {% set image2  = "https://dummyimage.com/270x300/cccccc/777777" %}
+{% endif %}
+{% if image3 | trim is empty %}
+    {% set image3  = "https://dummyimage.com/270x450/cccccc/777777" %}
+{% endif %}
+{% if image4 | trim is empty %}
+    {% set image4  = "https://dummyimage.com/850x300/cccccc/777777" %}
+{% endif %}
+{% if image5 | trim is empty %}
+    {% set image5  = "https://dummyimage.com/270x150/cccccc/777777" %}
+{% endif %}
+
+{# Grid Start #}
+<div class="cfourgrid">
+    <div class="grid-sizer"></div>
+    <div class="grid-item grid-item--width2 grid-item--height2">
+        {% if link1 is not empty %}
+            <a href="{{ link1 }}">
+                <div class="grid-content">
+                    <img src="{{ image1 }}">
+                </div>
+            </a>
+        {% else %}
+            <div class="grid-content">
+                <img src="{{ image1 }}">
+            </div>
+        {% endif %}
+    </div>
+    <div class="grid-item grid-item--height2">
+        {% if link2 is not empty %}
+            <a href="{{ link2 }}">
+                <div class="grid-content">
+                    <img src="{{ image2 }}">
+                </div>
+            </a>
+        {% else %}
+            <div class="grid-content">
+                <img src="{{ image2 }}">
+            </div>
+        {% endif %}
+    </div>
+    <div class="grid-item grid-item--height3">
+        {% if link3 is not empty %}
+            <a href="{{ link3 }}">
+                <div class="grid-content">
+                    <img src="{{ image3 }}">
+                </div>
+            </a>
+        {% else %}
+            <div class="grid-content">
+                <img src="{{ image3 }}">
+            </div>
+        {% endif %}
+    </div>
+    <div class="grid-item grid-item--width3 grid-item--height2">
+        {% if link4 is not empty %}
+            <a href="{{ link4 }}">
+                <div class="grid-content">
+                    <img src="{{ image4 }}">
+                </div>
+            </a>
+        {% else %}
+            <div class="grid-content">
+                <img src="{{ image4 }}">
+            </div>
+        {% endif %}
+    </div>
+    <div class="grid-item">
+        {% if link5 is not empty %}
+            <a href="{{ link5 }}">
+                <div class="grid-content">
+                    <img src="{{ image5 }}">
+                </div>
+            </a>
+        {% else %}
+            <div class="grid-content">
+                <img src="{{ image5 }}">
+            </div>
+        {% endif %}
+    </div>
+</div>
+{# Grid End #}

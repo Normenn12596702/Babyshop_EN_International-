@@ -1,0 +1,33 @@
+.anicon {
+    & > .anicon-search-item {
+        &:before {
+            background: $cfourPrimaryColor;
+        }
+        &:after {
+            border: 1px solid $cfourPrimaryColor;
+            background: $cfourSecondaryColor;
+        }
+    }
+    &.anicon-search-xcross {
+        &[aria-expanded="false"] {
+            &:hover {
+                & > .anicon-search-item {
+                    &:after {
+                        background: $cfourSecondaryColor;
+                    }
+                }
+            }
+        }
+
+        &[aria-expanded="true"] {
+            & > .anicon-search-item {
+                &:before {
+                    background: $cfourPrimaryColor;
+                }
+                &:after {
+                    background: $cfourPrimaryColor;
+                }
+            }
+        }
+    }
+}

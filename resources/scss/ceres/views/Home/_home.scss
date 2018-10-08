@@ -1,0 +1,258 @@
+body > #vue-app {
+  background-color: $cfourWhite;
+}
+
+.btn.btn-right, .btn > .fa {
+  float: none;
+}
+
+.cmp-hero {
+  .hero-main {
+    .carousel {
+      .carousel-item {
+        .hero-category {
+          h2 {
+            background: rgba($cfourSecondaryColor, .8) !important;
+          }
+        }
+        &:hover {
+          h2 {
+            background: $cfourSecondaryColor !important;
+          }
+        }
+      }
+      .carousel-indicators {
+        li {
+          border-color: $cfourPrimaryColor;
+          &.active {
+            background: $cfourPrimaryColor;
+          }
+        }
+      }
+      .carousel-control {
+        span:before {
+          color: $cfourPrimaryColor;
+        }
+      }
+    }
+  }
+}
+.hero-xtras {
+  .hero-category {
+    margin-bottom: 14px;
+    .hero-wrapper {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .hero-category-inner {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba($cfourSecondaryColor, .9);
+        -moz-transition: background-color 0.4s;
+        -webkit-transition: background-color 0.4s;
+        transition: background-color 0.4s;
+        &:hover {
+          background-color: rgba($cfourSecondaryColor, 1);
+        }
+        .hero-category-headline {
+          margin: .5rem;
+          color: $cfourWhite;
+        }
+      }
+    }
+  }
+}
+
+#page-body {
+  .home {
+    .section-header {
+      background: transparent;
+      padding: 5px 0;
+      border-bottom: 1px solid $cfourLightGray;
+      margin-bottom: 30px !important;
+
+      h2 {
+        color: $cfourGrayFont;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      a.section-link-all {
+        color: $cfourGrayFont;
+        right: 0;
+
+        &:hover {
+          color: $cfourGrayFont;
+        }
+      }
+    }
+    .nav-tabs {
+      border-bottom: 1px solid $cfourLightGray;
+      .nav-item {
+        margin: 0;
+        .nav-link {
+          color: $cfourSecondaryColor;
+          border: none;
+          text-transform: uppercase;
+          padding: 5px 20px;
+          font-size: 20px;
+        }
+        .nav-link:first-child {
+          padding-left: 0;
+        }
+        .nav-link.active {
+          color: $cfourPrimaryColor;
+        }
+      }
+      @media (max-width: 767px) {
+        .nav-item {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+    }
+    .tab-content {
+      margin-top: 20px;
+    }
+    .sale-new {
+      .featured-sale-new > img{
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+      }
+    }
+    /* ---- grid-item ---- */
+    .cfourgrid {
+      max-width: none;
+      margin-left: -10px;
+      margin-right: -10px;
+      .grid-sizer {
+        width: 25%;
+      }
+      .grid-item {
+        width: 25%;
+        margin-bottom: 20px;
+        height: 150px;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
+        float: left;
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+        .grid-content {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          position: relative;
+          img {
+            width: 100%;
+            position: absolute;
+            top: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            right: -9999px;
+            margin: auto;
+          }
+        }
+      }
+      .grid-item--width2 { width: 50% }
+      .grid-item--width3 { width: 75% }
+      .grid-item--width4 { width: 100% }
+
+      .grid-item--height2 { height: 300px; }
+      .grid-item--height3 { height: 450px; }
+      .grid-item--height4 { height: 600px; }
+
+      @media (max-width: 1199px) {
+        .grid-item { height: 122px;}
+        .grid-item--height2 { height: 244px; }
+        .grid-item--height3 { height: 366px; }
+        .grid-item--height4 { height: 488px; }
+      }
+
+      @media (max-width: 991px) {
+        .grid-item { height: 92px;}
+        .grid-item--height2 { height: 184px; }
+        .grid-item--height3 { height: 276px; }
+        .grid-item--height4 { height: 368px; }
+      }
+    }
+    @media (max-width: 767px) {
+      .cfourgrid { display: none; }
+    }
+    .cfourproductslider {
+      margin-bottom: 25px;
+      .cfourproductslider-item {
+        padding: 0 15px;
+      }
+      .slick-prev,
+      .slick-next {
+        background-color: $cfourPrimaryColor;
+      }
+    }
+    .c4HomepageHeadline {
+      margin-bottom: 20px;
+      h2 {
+        text-transform: uppercase;
+        text-align: center;
+      }
+      hr {
+        width: 175px;
+        border-color: $cfourPrimaryColor;
+      }
+      a {
+        color: inherit;
+      }
+    }
+    .c4brands {
+      .c4brandsimages.c4grayscalebrands img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+      .c4brandsimages {
+        .c4brandlogo {
+          position: relative;
+          height: 150px;
+          margin-bottom: 20px;
+          img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+        }
+      }
+      .c4textafterbrands {
+        margin-top: 20px;
+      }
+    }
+  }
+  .CfourParallax {
+    height: 400px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    .category-title {
+      color: #fff;
+      text-shadow: 0 0 0.1em rgba(0,0,0,.75);
+      font-size: 500%;
+      margin-bottom: 1.5rem;
+      margin-left: 20px;
+      letter-spacing: 1px;
+      word-wrap: break-word;
+    }
+  }
+}

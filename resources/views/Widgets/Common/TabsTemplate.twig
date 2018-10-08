@@ -1,0 +1,84 @@
+{% import "Ceres::Widgets.Helper.TwigBuilder" as Twig %}
+
+{# Fetching infos #}
+{% set itemSort = widget.settings.itemSort.mobile %}
+{% set categoryId1 = widget.settings.categoryId1.mobile %}
+{% set categoryId2 = widget.settings.categoryId2.mobile %}
+{% set categoryId3 = widget.settings.categoryId3.mobile %}
+{% set categoryId4 = widget.settings.categoryId4.mobile %}
+{% set categoryId5 = widget.settings.categoryId5.mobile %}
+
+{{ Twig.set("category1", Twig.call("services.category.get", [categoryId1])) }}
+{{ Twig.set("category2", Twig.call("services.category.get", [categoryId2])) }}
+{{ Twig.set("category3", Twig.call("services.category.get", [categoryId3])) }}
+{{ Twig.set("category4", Twig.call("services.category.get", [categoryId4])) }}
+{{ Twig.set("category5", Twig.call("services.category.get", [categoryId5])) }}
+
+{# Default Values #}
+{% set listType = "category" %}
+
+{# Fetching Items #}
+{{ Twig.set("itemList1", Twig.call("services.itemList.getItemList", [listType, categoryId1, itemSort, 4]) ) }}
+{{ Twig.set("itemList2", Twig.call("services.itemList.getItemList", [listType, categoryId2, itemSort, 4]) ) }}
+{{ Twig.set("itemList3", Twig.call("services.itemList.getItemList", [listType, categoryId3, itemSort, 4]) ) }}
+{{ Twig.set("itemList4", Twig.call("services.itemList.getItemList", [listType, categoryId4, itemSort, 4]) ) }}
+{{ Twig.set("itemList5", Twig.call("services.itemList.getItemList", [listType, categoryId5, itemSort, 4]) ) }}
+
+{# Tabs Start #}
+<div class="m-b-2 clearfix">
+    <ul class="nav nav-tabs" role="tablist">
+        {% if categoryId1 is not empty %}
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#firstRow" role="tab">{{ Twig.print("category1.details[0].name") }}</a>
+            </li>
+        {% endif %}
+        {% if categoryId2 is not empty %}
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#secoundRow" role="tab">{{ Twig.print("category2.details[0].name") }}</a>
+            </li>
+        {% endif %}
+        {% if categoryId3 is not empty %}
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#thirdRow" role="tab">{{ Twig.print("category3.details[0].name") }}</a>
+            </li>
+        {% endif %}
+        {% if categoryId4 is not empty %}
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#fourthRow" role="tab">{{ Twig.print("category4.details[0].name") }}</a>
+            </li>
+        {% endif %}
+        {% if categoryId5 is not empty %}
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#fifthRow" role="tab">{{ Twig.print("category5.details[0].name") }}</a>
+            </li>
+        {% endif %}
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="firstRow" role="tabpanel">
+            {{ Twig.if("itemList1 is not empty") }}
+                <container-item-list :items="{{ Twig.print("itemList1.documents | json_encode") }}"></container-item-list>
+            {{ Twig.endif() }}
+        </div>
+        <div class="tab-pane" id="secoundRow" role="tabpanel">
+            {{ Twig.if("itemList2 is not empty") }}
+                <container-item-list :items="{{ Twig.print("itemList2.documents | json_encode") }}"></container-item-list>
+            {{ Twig.endif() }}
+        </div>
+        <div class="tab-pane" id="thirdRow" role="tabpanel">
+            {{ Twig.if("itemList3 is not empty") }}
+                <container-item-list :items="{{ Twig.print("itemList3.documents | json_encode") }}"></container-item-list>
+            {{ Twig.endif() }}
+        </div>
+        <div class="tab-pane" id="fourthRow" role="tabpanel">
+            {{ Twig.if("itemList4 is not empty") }}
+                <container-item-list :items="{{ Twig.print("itemList4.documents | json_encode") }}"></container-item-list>
+            {{ Twig.endif() }}
+        </div>
+        <div class="tab-pane" id="fifthRow" role="tabpanel">
+            {{ Twig.if("itemList5 is not empty") }}
+                <container-item-list :items="{{ Twig.print("itemList5.documents | json_encode") }}"></container-item-list>
+            {{ Twig.endif() }}
+        </div>
+    </div>
+</div>
+{# Tabs End #}

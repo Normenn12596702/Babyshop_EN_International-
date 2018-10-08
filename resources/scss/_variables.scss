@@ -1,0 +1,28 @@
+$cfourPrimaryColor: #062e47;
+$cfourSecondaryColor: #a2b9c9;
+$cfourTertiaryColor: #28424f;
+$cfourLightGray: #efefef;
+$cfourWhite: #fff;
+$cfourGrayFont: #999999;
+
+
+
+// $cfourPrimaryColor: #062e47;
+//$cfourSecondaryColor: #c6c9ae;
+//$cfourTertiaryColor: #d7fa00;
+//$cfourLightGray: #efefef;
+//$cfourWhite: #fff;
+//$cfourGrayFont: #999999;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+    xs:  0,
+    pxs: 544px,
+    sm:  576px,
+    md:  768px,
+    lg:  992px,
+    xl:  1200px
+) !default;

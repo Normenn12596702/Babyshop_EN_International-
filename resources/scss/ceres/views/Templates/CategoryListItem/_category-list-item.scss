@@ -1,0 +1,193 @@
+.cmp-product-thumb {
+    border: 1px solid $cfourLightGray;
+    background-color: transparent;
+    padding-bottom: 15px;
+
+    .thumb-background, .main-image, .thumb-content {
+        background-color: transparent;
+    }
+
+    .add-to-basket-lg-container {
+        border-color: transparent $cfourPrimaryColor transparent transparent;
+
+        & > i {
+            color: $cfourWhite;
+        }
+
+        &:hover {
+            border-color: transparent $cfourPrimaryColor transparent transparent;
+
+            & > i {
+                color: $cfourWhite;
+            }
+        }
+    }
+    .prices {
+        display: block;
+        text-align: right;
+        .crossprice {
+            color: $cfourSecondaryColor;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.1;
+        }
+
+        .price {
+            color: $cfourPrimaryColor;
+            font-weight: 900;
+            font-size: 20px;
+            text-align: right;
+        }
+
+        .price-col {
+            padding: 0;
+            left: 50%;
+        }
+        .crossprice-dummy {
+            height: 22px;
+        }
+    }
+
+    .vat-porto-info, .vat {
+        text-align: right;
+        display: inline-block;
+        width: 100%;
+        margin-top: 6px;
+        color: $cfourPrimaryColor !important;
+
+        & > a {
+            color: $cfourPrimaryColor;
+            text-decoration: underline;
+        }
+    }
+
+    .special-tags {
+        padding: 18px;
+
+        .special-tag, .tag {
+
+            &.bg-danger {
+                background-color: #FFCBFF !important;
+                color: $cfourPrimaryColor !important;
+
+                & > i {
+                    padding: 5px 7px;
+                }
+
+                &::after {
+                    border-color: transparent #ffcbff transparent;
+                }
+            }
+
+            &.bg-primary {
+                background-color: #C4DCFE !important;
+                color: $cfourWhite !important;
+
+                & > i {
+                    padding: 5px 6px;
+                }
+
+                &::after {
+                    border-color: transparent #C4DCFE transparent;
+                }
+            }
+
+            &.bg-success {
+                background-color: #30f292 !important;
+                color: $cfourWhite !important;
+
+                & > i {
+                    padding: 2px 12px;
+                    font-size: 31px;
+                }
+
+                &::after {
+                    border-color: transparent #30f292 transparent;
+                }
+            }
+
+            // @TODO: Add .bg-success ("Top item")
+
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: none;
+            position: relative;
+
+            & > i {
+                font-size: 25px;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 8px;
+                bottom: -12px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 15px 12px 0;
+            }
+        }
+    }
+
+    .thumb-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $cfourPrimaryColor;
+
+        & > small {
+            text-transform: none;
+            font-size: 100%;
+            line-height: 30px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .price, .crossprice {
+            font-size: 16px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .mobile-icon-right {
+            float: none;
+            margin-right: 10px;
+        }
+    }
+
+    @include media-breakpoint-down(pxs) {
+        .price, .crossprice {
+            font-size: 14px;
+            min-height: unset;
+            line-height: 20px;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        .special-tags {
+            padding: 0;
+
+            .tag {
+                padding: 0;
+
+                & > i {
+                    font-size: 18px;
+                }
+
+                &::after {
+                    right: 6px;
+                    bottom: -7px;
+                    border-width: 0 10px 7px 0;
+                }
+
+                &.bg-success > i {
+                    padding: 4px 11px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

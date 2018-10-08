@@ -1,0 +1,135 @@
+.footer {
+    font-size: 14px;
+    font-weight: 300;
+    background: $cfourWhite;
+    .c4footerentries {
+        text-transform: uppercase;
+
+        & > .m-y-2 {
+            border-color: #35354D;
+        }
+    }
+    .c4footerheadline {
+        border-bottom: 1px solid #32374b;
+        padding-bottom: 12px;
+        display: block;
+    }
+    a {
+        font-weight: bold;
+        color: #002d42;
+    }
+    .c4footerbox {
+        padding: 15px 0;
+
+        li {
+            list-style: none;
+        }
+        li.c4footershoppinglink {
+            padding-bottom: 10px;
+        }
+        .c4footertag {
+            float: left;
+            border: 1px solid #efefef;
+            padding: 0px 7px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            & > *{
+                font-size: 16px;
+                font-weight: normal;
+            }
+        }
+    }
+    .c4footercontact {
+      i {
+          font-size: 20px;
+          margin-right: 5px;
+      }
+        a {
+            font-weight: 300;
+        }
+    }
+    .c4footeremail {
+      text-transform: lowercase;
+    }
+    .c4footersocialmedia {
+        i {
+            font-size: 20px;
+            border: 1px solid #efefef;
+            padding: 5px 10px;
+            margin-right: 2px;
+        }
+        span{
+            &:last-child{
+                text-transform: lowercase;
+            }
+        }
+    }
+    .back-to-top-center {
+        background: $cfourSecondaryColor;
+        bottom: -5px;
+        width: 50px;
+        right: 50px;
+        border: none;
+        opacity: 1;
+        border-radius: 0;
+        left: auto;
+        i {
+            width: 50px;
+        }
+    }
+    .c4footerabout {
+        text-transform: none;
+    }
+    .c4footerAboutUs {
+        padding-top: 20px;
+        .cfourfootersvg{
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+    }
+    .c4footerShopping {
+        padding-top: 20px;
+        .c4footershopping {
+            a {
+                padding-bottom: 10px;
+                display: inline-block;
+            }
+        }
+    }
+    .c4footerInformation {
+        padding-top: 20px;
+        a {
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+    }
+    .c4footersymbol{
+        padding-right: 18px;
+    }
+}
+#c4copyright{
+    background-color: #d9dad5;
+    height: auto;
+    padding: 22px;
+    .container-max.c4footercopyright a {
+        color: $cfourPrimaryColor;
+        font-weight: bold;
+    }
+    .c4footerPayments{
+        i {
+            font-size: 22px;
+            padding-right: 30px;
+        }
+        .paymentlink {
+            margin-right: 30px;
+            i {
+                padding-right: 0;
+            }
+        }
+    }
+}

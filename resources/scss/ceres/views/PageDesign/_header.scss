@@ -1,0 +1,250 @@
+a {
+	color: $cfourPrimaryColor;
+}
+.wrapper-main {
+	#page-header.top-bar {
+		background: $cfourSecondaryColor;
+		.cfour-cachet {
+			position: relative;
+			.cachet {
+				position: absolute;
+				left: 0;
+				z-index: 9999;
+				top: 0;
+				background: #fff;
+				box-shadow: 0 3px 17px rgba(0,0,0,0.1);
+				padding: 15px 0 15px 15px;
+				width: auto;
+				height: 110px;
+				.image {
+					width: 80px;
+					height: 80px;
+					background-size: cover !important;
+					background-position: center !important;
+					background-repeat: no-repeat !important;
+					display: inline-block !important;
+					margin-right: 15px;
+				}
+				img {
+					border-style: none;
+					width: 100px;
+					padding-right: 15px;
+				}
+			}
+		}
+		.controls-list {
+            .control-user {
+				#login-change {
+					& > .dropdown {
+						.dropdown-menu {
+							a {
+								background-color: $cfourWhite;
+								color: $cfourPrimaryColor;
+							}
+						}
+					}
+					& > .dropdown.open {
+					  	a {
+							background-color: $cfourWhite;
+							color: $cfourPrimaryColor;
+					  	}
+					}
+                }
+            }
+			.control-languages {
+				a[aria-expanded="true"] {
+					background: $cfourSecondaryColor;
+				}
+			}
+			.control-search {
+				a[aria-expanded="true"] {
+					background: $cfourSecondaryColor;
+				}
+			}
+			.control-wish-list {
+				a {
+					i.fa-heart {
+						color: $cfourPrimaryColor;
+					}
+				}
+			}
+			.control-basket {
+				position: relative;
+				.toggle-basket-preview {
+					background-color: $cfourWhite;
+					color: $cfourPrimaryColor;
+					&:hover {
+						background-color: $cfourWhite;
+					}
+				}
+				#basket-tooltip {
+					position: absolute;
+					z-index: 9999;
+					right: 20px;
+					cursor: pointer;
+					opacity: 1;
+					-webkit-transition: opacity 0.4s;
+					-moz-transition: opacity 0.4s;
+					transition: opacity 0.4s;
+					.tooltipArrow {
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 0 10px 10px 10px;
+						border-color: transparent transparent $cfourPrimaryColor transparent;
+						float: right;
+						margin-right: 10px;
+					}
+					.tooltipContent {
+						padding: 4px 20px;
+						margin-top: 10px;
+						font-size: 16px;
+						background: $cfourPrimaryColor;
+						color: $cfourWhite;
+						white-space: nowrap;
+					}
+				}
+				#basket-tooltip.cfourFadeOut {
+					opacity: 0;
+				}
+			}
+            li{
+              a{
+                font-size: .9em;
+                color: $cfourPrimaryColor;
+                text-transform: uppercase;
+                &:hover {
+                  background: $cfourSecondaryColor;
+                  color: $cfourPrimaryColor;
+                }
+              }
+              a[aria-expanded="true"] {
+                background: $cfourSecondaryColor;
+                font-size: .9em;
+                color: $cfourPrimaryColor;
+                text-transform: uppercase;
+              }
+            }
+			&>li{
+				a{
+					font-size: .9em;
+					color: $cfourPrimaryColor;
+					text-transform: uppercase;
+					min-height: 30px;
+					outline: none;
+					&:hover {
+						background: $cfourSecondaryColor;
+						color: $cfourPrimaryColor;
+					}
+				}
+                a[aria-expanded="true"] {
+                  background: $cfourSecondaryColor;
+                  font-size: .9em;
+                  color: $cfourPrimaryColor;
+                  text-transform: uppercase;
+                }
+			}
+		}
+		.brand-wrapper {
+			position: relative;
+			transform: none;
+			text-align: center;
+			.navbar-brand {
+				display: block;
+				margin: 0 auto;
+				max-width: 200px;
+				padding: 20px 0;
+				img {
+					max-height: none;
+				}
+			}
+		}
+	}
+	.navbar {
+		background: $cfourWhite;
+		border-bottom: none;
+	}
+	#page-body {
+		margin-top: 167px;
+	}
+}
+
+@media (max-width: 354px) {
+	.control-basket i{
+		display: none;
+	}
+	.control-wish-list .badge-right{
+		display: none;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.wrapper-main {
+		#page-header.top-bar {
+			.cfour-cachet {
+				.cachet {
+					top: 30px;
+					padding: 7px 0 7px 7px;
+					width: auto;
+					height: 55px;
+					.image {
+						width: 40px;
+						height: 40px;
+					}
+					img {
+						border-style: none;
+						width: 40px;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(pxs) {
+	.wrapper-main {
+		#page-header.top-bar {
+			.cfour-cachet {
+				.cachet {
+					top:33px;
+					padding: 7px 0 7px 7px;
+					width: auto;
+					height: 55px;
+					.image {
+						width: 40px;
+						height: 40px;
+					}
+					img {
+						border-style: none;
+						width: 40px;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+@include media-breakpoint-down(xs) {
+	.wrapper-main {
+		#page-header.top-bar {
+			.cfour-cachet {
+				.cachet {
+					top:33px;
+					padding: 7px 0 7px 7px;
+					width: auto;
+					height: 55px;
+					.image {
+						width: 40px;
+						height: 40px;
+					}
+					img {
+						border-style: none;
+						width: 40px;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}

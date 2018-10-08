@@ -1,0 +1,102 @@
+#mainNavbarCollapsable {
+	background: $cfourLightGray;
+	border-top: 1px solid $cfourSecondaryColor;
+	border-bottom: 1px solid $cfourSecondaryColor;
+	ul.mainmenu{
+		color: $cfourPrimaryColor;
+		text-align: center;
+		//QUICKFIX temporär
+		float: none !important;
+		li {
+			float: none;
+			&:hover {
+				background-color: transparent;
+				color: $cfourPrimaryColor;
+			}
+			&>ul {
+				background: $cfourWhite;
+				&>li {
+					border-top: 1px solid $cfourPrimaryColor;
+					font-weight: bold;
+					color: $cfourPrimaryColor;
+					&:hover {
+						background: $cfourSecondaryColor;
+						color: $cfourPrimaryColor;
+					}
+				}
+			}
+		}
+		li.ddown {
+			.level1  {
+				border: none;
+				& > a {
+					text-transform: uppercase;
+					border-bottom: 1px solid;
+					margin-bottom: 10px;
+				}
+				.level2 {
+					font-weight: normal;
+					border: none;
+					&:hover {
+						background: $cfourWhite;
+					}
+				}
+			}
+		}
+	}
+}
+
+nav.navbar.megamenu {
+	#mainNavbarCollapsable {
+        li.ddown {
+            & > ul {
+                border: 1px solid $cfourSecondaryColor;
+            }
+        }
+    }
+}
+nav.navbar.megamenu {
+	 @include media-breakpoint-up(lg){ position : relative; }
+	 #mainNavbarCollapsable {
+
+		 @include media-breakpoint-up(lg){
+			 ul.mainmenu {
+				 justify-content : center;
+				 >li {
+					 &:hover {
+						 color 	   : $cfourPrimaryColor !important;
+					 }
+
+					 >ul.collapse {
+						 >li {
+
+							 &.level1 {
+								 >a {
+									 color 		: $cfourPrimaryColor;
+								 }
+							 }
+							 a {
+								 color 		: $cfourPrimaryColor;
+
+								 &:hover{
+									 color 		: $cfourPrimaryColor !important;
+								 }
+							 }
+						 }
+
+					 }
+
+				 }
+			 }
+		 }
+	 }
+ }
+
+.mobile-navigation {
+	color: $cfourPrimaryColor;
+	background: $cfourWhite;
+	ul.breadcrumb {
+		background: $cfourSecondaryColor;
+		color: $cfourWhite;
+	}
+}

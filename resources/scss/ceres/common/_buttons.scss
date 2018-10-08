@@ -1,0 +1,92 @@
+.btn-outline-primary {
+	color: $cfourPrimaryColor;
+	border-color: $cfourSecondaryColor;
+	&:focus,
+	&.focus {
+		color: $cfourPrimaryColor;
+		background-color: darken($cfourSecondaryColor, 10%);
+		border-color: darken($cfourSecondaryColor, 25%);
+	}
+	&:hover {
+		color: $cfourPrimaryColor;
+		background-color: darken($cfourSecondaryColor, 10%);
+		border-color: darken($cfourSecondaryColor, 12%);
+	}
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		color: $cfourPrimaryColor;
+		background-color: darken($cfourSecondaryColor, 10%);
+		border-color: darken($cfourSecondaryColor, 12%);
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: $cfourPrimaryColor;
+			background-color: darken($cfourSecondaryColor, 17%);
+			border-color: darken($cfourSecondaryColor, 25%);
+		}
+	}
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: $cfourSecondaryColor;
+			border-color: $cfourSecondaryColor;
+		}
+	}
+}
+
+.btn-primary {
+	background-color: $cfourSecondaryColor;
+	border-color: $cfourSecondaryColor;
+	color: $cfourPrimaryColor;
+	&:focus,
+	&.focus {
+		color: $cfourPrimaryColor;
+		background-color: darken($cfourSecondaryColor, 10%);
+		border-color: darken($cfourSecondaryColor, 25%);
+	}
+	&:hover {
+		color: $cfourPrimaryColor;
+		background-color: darken($cfourSecondaryColor, 10%);
+		border-color: darken($cfourSecondaryColor, 12%);
+	}
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		color: $cfourPrimaryColor;
+		background-color: darken($cfourSecondaryColor, 10%);
+		border-color: darken($cfourSecondaryColor, 12%);
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: $cfourPrimaryColor;
+			background-color: darken($cfourSecondaryColor, 17%);
+			border-color: darken($cfourSecondaryColor, 25%);
+		}
+	}
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: $cfourSecondaryColor;
+			border-color: $cfourSecondaryColor;
+		}
+	}
+}

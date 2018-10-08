@@ -1,0 +1,130 @@
+#page-body {
+  .single {
+    .carousel-control:hover i {
+      color: $cfourPrimaryColor;
+    }
+    @media (min-width: 768px) {
+      .carousel-control.right {
+        margin-right: 5px;
+      }
+    }
+    .single-rightside {
+      .CfourArticleHeader {
+        text-transform: uppercase;
+      }
+      hr {
+        border-top: 1px solid $cfourPrimaryColor;
+      }
+      .CfourArticleTable {
+        width: 100%;
+      }
+      .producerimage {
+        img {
+          max-width: 100%;
+        }
+      }
+      .single-description {
+        font-size: 14px;
+      }
+      .input-unit {
+        width: 33.333%;
+        float: left;
+        .custom-select {
+          padding: 10px 15px;
+          font-weight: bold;
+          color: $cfourPrimaryColor;
+        }
+      }
+      label {
+        float: left;
+        line-height: 36px;
+        margin-left: 15px;
+        font-weight: bold;
+      }
+      .crossprice del{
+        color: $cfourSecondaryColor;
+        font-size: 24px;
+      }
+      .price {
+        font-weight: bold;
+        font-size: 40px;
+        //color: #5b0026;
+        color: $cfourPrimaryColor;
+        .vat {
+          color: $cfourPrimaryColor;
+          font-weight: normal;
+          font-size: 10px;
+          a {
+            text-decoration: underline;
+            color: inherit;
+          }
+        }
+      }
+      @media (max-width: 991px) and (min-width: 768px) {
+        .price {
+          float: left !important;
+        }
+      }
+      .CfourAddToBasket {
+        .CfourQuantityInput {
+          input {
+            font-weight: bold;
+            color: $cfourPrimaryColor;
+            border-color: $cfourGrayFont;
+          }
+          .input-group-btn button{
+            border-color: $cfourGrayFont;
+          }
+        }
+        .CfourAddToBasketButton {
+          background: $cfourSecondaryColor;
+          border: $cfourSecondaryColor;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 0.9em;
+          padding: .7em 0;
+        }
+        .CfourAddToBasketButton:hover {
+          background: #b3cd16;
+          border: #b3cd16;
+        }
+      }
+      .add-to-wish-list {
+        color: $cfourPrimaryColor;
+        font-weight: bold;
+        .fa-heart {
+          padding: 7.5px;
+          border: 1px solid #cccccc;
+          color: $cfourPrimaryColor;
+          font-size: 16px;
+          margin-right: 15px;
+        }
+      }
+      .add-to-wish-list:hover {
+        .fa-heart {
+          color: $cfourPrimaryColor !important;
+        }
+      }
+    }
+  }
+  .nav-tabs {
+    border-bottom: 1px solid $cfourPrimaryColor;
+    .nav-link {
+      border: none;
+      color: $cfourPrimaryColor;
+    }
+    .nav-link:hover {
+      background: transparent;
+      color: $cfourPrimaryColor;
+    }
+    .nav-link.active {
+      background: $cfourWhite;
+      border-top: 1px solid $cfourPrimaryColor;
+      border-left: 1px solid $cfourPrimaryColor;
+      border-right: 1px solid $cfourPrimaryColor;
+      margin-top: -1px;
+      margin-left: -1px;
+      margin-right: -1px;
+    }
+  }
+}

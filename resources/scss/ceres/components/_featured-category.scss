@@ -1,0 +1,10 @@
+.featured-category {
+    .featured-category-headline {
+        background: $cfourSecondaryColor;
+    }
+    &:hover {
+        .featured-category-headline {
+            background: $cfourSecondaryColor;
+        }
+    }
+}
