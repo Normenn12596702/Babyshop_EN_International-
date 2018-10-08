@@ -1,0 +1,247 @@
+[
+    {
+        "identifier": "CfourCeresFashionAdvanced::GridWidget",
+        "label": "Widget.gridWidgetLabel",
+        "previewImageURL": "/images/widgets/grid.png",
+        "type": "default",
+        "allowedNestingTypes": [
+            "default",
+            "structure"
+        ],
+        "widgetClass": "CfourCeresFashionAdvanced\\Widgets\\Common\\CfourGridWidget",
+
+        "settings": {
+            "customImagePath1": {
+                "type": "inputFile",
+                "required": true,
+                "label": "Widget.imageLabel1",
+                "options": {
+                    "tooltip": "Widget.imageSize1",
+                    "defaultValue": ""
+                }
+            },
+            "customImagePath2": {
+                "type": "inputFile",
+                "required": true,
+                "label": "Widget.imageLabel2",
+                "options": {
+                    "tooltip": "Widget.imageSize2",
+                    "defaultValue": ""
+                }
+            },
+            "customImagePath3": {
+                "type": "inputFile",
+                "required": true,
+                "label": "Widget.imageLabel3",
+                "options": {
+                    "tooltip": "Widget.imageSize3",
+                    "defaultValue": ""
+                }
+            },
+            "customImagePath4": {
+                "type": "inputFile",
+                "required": true,
+                "label": "Widget.imageLabel4",
+                "options": {
+                    "tooltip": "Widget.imageSize4",
+                    "defaultValue": ""
+                }
+            },
+            "customImagePath5": {
+                "type": "inputFile",
+                "required": true,
+                "label": "Widget.imageLabel5",
+                "options": {
+                    "tooltip": "Widget.imageSize5",
+                    "defaultValue": ""
+                }
+            },
+            "linkImage1": {
+                "type": "inputText",
+                "required": false,
+                "label": "Widget.link1",
+                "options": {
+                    "defaultValue": ""
+                }
+            },
+            "linkImage2": {
+                "type": "inputText",
+                "required": false,
+                "label": "Widget.link2",
+                "options": {
+                    "defaultValue": ""
+                }
+            },
+            "linkImage3": {
+                "type": "inputText",
+                "required": false,
+                "label": "Widget.link3",
+                "options": {
+                    "defaultValue": ""
+                }
+            },
+            "linkImage4": {
+                "type": "inputText",
+                "required": false,
+                "label": "Widget.link4",
+                "options": {
+                    "defaultValue": ""
+                }
+            },
+            "linkImage5": {
+                "type": "inputText",
+                "required": false,
+                "label": "Widget.link5",
+                "options": {
+                    "defaultValue": ""
+                }
+            }
+        }
+    },
+    {
+        "identifier": "CfourCeresFashionAdvanced::CategoryTabsWidget",
+        "label": "Widget.tabsWidgetLabel",
+        "previewImageURL": "/images/widgets/tabs.png",
+        "type": "default",
+        "allowedNestingTypes": [
+            "default",
+            "structure"
+        ],
+        "widgetClass": "CfourCeresFashionAdvanced\\Widgets\\Common\\CfourCategoryTabsWidget",
+
+        "settings": {
+
+            "itemSort": {
+                "type": "selectBox",
+                "required": true,
+                "label": "Widget.itemListItemSortLabel",
+                "options": {
+                    "tooltip": "Widget.itemListItemSortTooltip",
+                    "defaultValue": "texts.name1_asc",
+                    "selectBoxValues": [
+                        {
+                            "value": "default.recommended_sorting",
+                            "caption": "Widget.itemRecommendedSorting",
+                            "position": 0
+                        },
+                        {
+                            "value": "texts.name1_asc",
+                            "caption": "Widget.itemName_asc",
+                            "position": 1
+                        },
+                        {
+                            "value": "texts.name1_desc",
+                            "caption": "Widget.itemName_desc",
+                            "position": 2
+                        },
+                        {
+                            "value": "sorting.price.avg_asc",
+                            "caption": "Widget.itemPrice_asc",
+                            "position": 3
+                        },
+                        {
+                            "value": "sorting.price.avg_desc",
+                            "caption": "Widget.itemPrice_desc",
+                            "position": 4
+                        },
+                        {
+                            "value": "variation.createdAt_desc",
+                            "caption": "Widget.itemVariationCreateTimestamp_desc",
+                            "position": 5
+                        },
+                        {
+                            "value": "variation.createdAt_asc",
+                            "caption": "Widget.itemVariationCreateTimestamp_asc",
+                            "position": 6
+                        },
+                        {
+                            "value": "variation.availability.averageDays_asc",
+                            "caption": "Widget.itemAvailabilityAverageDays_asc",
+                            "position": 7
+                        },
+                        {
+                            "value": "variation.availability.averageDays_desc",
+                            "caption": "Widget.itemAvailabilityAverageDays_desc",
+                            "position": 8
+                        },
+                        {
+                            "value": "variation.number_asc",
+                            "caption": "Widget.itemVariationCustomNumber_asc",
+                            "position": 9
+                        },
+                        {
+                            "value": "variation.number_desc",
+                            "caption": "Widget.itemVariationCustomNumber_desc",
+                            "position": 10
+                        },
+                        {
+                            "value": "variation.updatedAt_asc",
+                            "caption": "Widget.itemVariationLastUpdateTimestamp_asc",
+                            "position": 11
+                        },
+                        {
+                            "value": "variation.updatedAt_desc",
+                            "caption": "Widget.itemVariationLastUpdateTimestamp_desc",
+                            "position": 12
+                        },
+                        {
+                            "value": "item.manufacturer.externalName_asc",
+                            "caption": "Widget.itemProducerName_asc",
+                            "position": 13
+                        },
+                        {
+                            "value": "item.manufacturer.externalName_desc",
+                            "caption": "Widget.itemProducerName_desc",
+                            "position": 14
+                        }
+                    ]
+                }
+            },
+            "categoryId1": {
+                "type": "categoryPicker",
+                "required": true,
+                "label": "Widget.itemListCategoryIdLabel1",
+                "options": {
+                    "tooltip": "Widget.itemListCategoryIdTooltipActive",
+                    "defaultValue": ""
+                }
+            },
+            "categoryId2": {
+                "type": "categoryPicker",
+                "required": false,
+                "label": "Widget.itemListCategoryIdLabel2",
+                "options": {
+                    "tooltip": "Widget.itemListCategoryIdTooltip",
+                    "defaultValue": ""
+                }
+            },
+            "categoryId3": {
+                "type": "categoryPicker",
+                "required": false,
+                "label": "Widget.itemListCategoryIdLabel3",
+                "options": {
+                    "tooltip": "Widget.itemListCategoryIdTooltip",
+                    "defaultValue": ""
+                }
+            },
+            "categoryId4": {
+                "type": "categoryPicker",
+                "required": false,
+                "label": "Widget.itemListCategoryIdLabel4",
+                "options": {
+                    "tooltip": "Widget.itemListCategoryIdTooltip",
+                    "defaultValue": ""
+                }
+            },
+            "categoryId5": {
+                "type": "categoryPicker",
+                "required": false,
+                "label": "Widget.itemListCategoryIdLabel5",
+                "options": {
+                    "tooltip": "Widget.itemListCategoryIdTooltip",
+                    "defaultValue": ""
+                }
+            }
+        }
+    }
+]
