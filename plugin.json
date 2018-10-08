@@ -28,8 +28,8 @@
         "shop builder"
     ],
     "require": {
-        "IO" : ">=2.14.0",
-        "Ceres" : ">=2.14.0"
+        "IO" : "=2.15.0",
+        "Ceres" : "=2.15.0"
     },
     "serviceProvider"   :   "CfourCeresFashionAdvanced\\Providers\\CfourCeresFashionAdvancedServiceProvider",
     "dataProviders"         :
