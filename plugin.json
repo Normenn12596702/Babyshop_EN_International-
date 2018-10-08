@@ -1,0 +1,43 @@
+{
+    "version"           :   "2.15.0",
+    "license"           :   "MIT",
+    "name"              :   "CfourCeresFashionAdvanced",
+    "marketplaceName"   : { "de": "Ceres Fashion Professional", "en": "Ceres Fashion Professional" },
+    "isClosedSource"    :   true,
+    "pluginIcon"        :   "icon_plugin_xs.png",
+    "description"       :   "Was macht ein Theme aus, dass eigens für Fashion gemacht ist? Wir haben uns an den bekanntesten Shops der Branche orientiert und die bestmögliche Schnittmenge gebildet, um ein Theme zu entwickeln, dem man direkt ansehen kann, für welche Zielgruppe es gedacht ist.",
+    "shortDescription"  : { "de": "Dieses Theme ist die kostenpflichtige Variante, die out of the box weg vom Standard die Basis für einen attraktiven Fashionshop bietet.", "en": "This theme is the premium version, which allows an easy start of a fashion shop." },
+    "namespace"         :   "CfourCeresFashionAdvanced",
+    "author"            :   "COMMERCE4 GmbH",
+    "email"             :   "support@commerce4.de",
+    "phone"             :   "+49 (0) 2563 – 90555 79",
+    "authorIcon"        :   "icon_author_xs.png",
+    "price"             :   118.9881,
+    "categories"        :   ["3518"],
+    "type"              :   "theme",
+    "keywords"          :
+    [
+        "theme",
+        "fashion",
+        "theme fashion",
+        "cfour",
+        "commerce4",
+        "c4",
+        "fashion theme",
+        "shopbuilder",
+        "shop builder"
+    ],
+    "require": {
+        "IO" : ">=2.14.0",
+        "Ceres" : ">=2.14.0"
+    },
+    "serviceProvider"   :   "CfourCeresFashionAdvanced\\Providers\\CfourCeresFashionAdvancedServiceProvider",
+    "dataProviders"         :
+    [
+        {
+            "key"           :"CfourCeresFashionAdvanced\\Providers\\CfourCeresFashionAdvancedBrandsProvider",
+            "name"          :"Brand Images",
+            "description"   :"Displays a configurable list of items in your online store"
+        }
+    ]
+}
